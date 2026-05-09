@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="page_title">张明远 | 天然地震学</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo" data-i18n="nav_logo">张明远</a>
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#home" data-i18n="nav_home">首页</a></li>
+                <li><a href="#about" data-i18n="nav_about">关于</a></li>
+                <li><a href="#skills" data-i18n="nav_skills">技能</a></li>
+                <li><a href="#projects" data-i18n="nav_projects">项目</a></li>
+                <li><a href="#publications" data-i18n="nav_publications">论文</a></li>
+                <li><a href="#contact" data-i18n="nav_contact">联系</a></li>
+            </ul>
+            <div class="nav-controls">
+                <button id="theme-toggle" class="control-btn" aria-label="Toggle theme">
+                    <span class="theme-icon">☀️</span>
+                </button>
+                <button id="lang-toggle" class="control-btn" aria-label="Toggle language">
+                    <span data-i18n="lang_label">中/EN</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title" data-i18n="hero_title">张明远</h1>
+                <p class="hero-subtitle" data-i18n="hero_subtitle">天然地震学 · 研一</p>
+                <p class="hero-intro" data-i18n="hero_intro">探索地球内部的震动信号，揭示地壳运动的奥秘</p>
+            </div>
+            <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 5v14M5 12l7 7 7-7"/>
+                </svg>
+            </a>
+        </section>
+
+        <section id="about" class="section">
+            <div class="section-content">
+                <h2 class="section-title" data-i18n="about_title">关于我</h2>
+                <div class="about-grid">
+                    <div class="about-card">
+                        <h3 data-i18n="about_education_title">教育背景</h3>
+                        <p data-i18n="about_education">中国地震局地质研究所 · 硕士研究生 · 天然地震学方向</p>
+                    </div>
+                    <div class="about-card">
+                        <h3 data-i18n="about_research_title">研究兴趣</h3>
+                        <p data-i18n="about_research">地震定位 · 震源机制解 · 地壳结构成像 · 地震危险性评估</p>
+                    </div>
+                    <div class="about-card about-intro">
+                        <h3 data-i18n="about_intro_title">个人介绍</h3>
+                        <p data-i18n="about_intro">我是一名天然地震学方向的硕士研究生，目前就读于中国地震局地质研究所。我的研究聚焦于地震定位、震源机制解以及地壳结构成像。我热衷于通过地震波形数据理解地球内部的物理过程，并致力于将研究成果应用于地震危险性评估。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section alt-bg">
+            <div class="section-content">
+                <h2 class="section-title" data-i18n="skills_title">技能</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3 data-i18n="skill_programming">编程语言</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">MATLAB</span>
+                            <span class="skill-tag">Fortran</span>
+                            <span class="skill-tag">Shell</span>
+                            <span class="skill-tag">Go</span>
+                            <span class="skill-tag">C++</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3 data-i18n="skill_seismology">地震学工具</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">ObsPy</span>
+                            <span class="skill-tag">SAC</span>
+                            <span class="skill-tag">GMT</span>
+                            <span class="skill-tag">CPS</span>
+                            <span class="skill-tag">TauP</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3 data-i18n="skill_data">数据处理</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Pandas</span>
+                            <span class="skill-tag">NumPy</span>
+                            <span class="skill-tag">SciPy</span>
+                            <span class="skill-tag">Matplotlib</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3 data-i18n="skill_other">其他工具</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">LaTeX</span>
+                            <span class="skill-tag">Linux</span>
+                            <span class="skill-tag">Docker</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="section-content">
+                <h2 class="section-title" data-i18n="projects_title">项目展示</h2>
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="https://source.unsplash.com/800x500/?tectonic,earth" alt="Project 1">
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title" data-i18n="project1_title">基于双差定位法的地震重定位研究</h3>
+                            <p class="project-desc" data-i18n="project1_desc">利用双差定位算法对区域地震目录进行重定位，提高震源位置精度</p>
+                            <div class="project-tags">
+                                <span class="project-tag">Python</span>
+                                <span class="project-tag">ObsPy</span>
+                                <span class="project-tag">双差定位</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="https://source.unsplash.com/800x500/?seismic,geology" alt="Project 2">
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title" data-i18n="project2_title">接收函数与H-κ叠加地壳结构成像</h3>
+                            <p class="project-desc" data-i18n="project2_desc">基于远震接收函数方法反演台站下方地壳厚度与波速比</p>
+                            <div class="project-tags">
+                                <span class="project-tag">接收函数</span>
+                                <span class="project-tag">H-κ叠加</span>
+                                <span class="project-tag">MATLAB</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="https://source.unsplash.com/800x500/?earth,data" alt="Project 3">
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title" data-i18n="project3_title">地震目录统计分析工具</h3>
+                            <p class="project-desc" data-i18n="project3_desc">开发 Python 工具包用于地震目录的完整性评估与统计分析</p>
+                            <div class="project-tags">
+                                <span class="project-tag">Python</span>
+                                <span class="project-tag">Pandas</span>
+                                <span class="project-tag">统计分析</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="https://source.unsplash.com/800x500/?earthquake,fault" alt="Project 4">
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title" data-i18n="project4_title">基于机器学习的震相自动拾取</h3>
+                            <p class="project-desc" data-i18n="project4_desc">利用深度学习模型实现P波和S波震相的自动识别与拾取</p>
+                            <div class="project-tags">
+                                <span class="project-tag">深度学习</span>
+                                <span class="project-tag">PyTorch</span>
+                                <span class="project-tag">震相拾取</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="publications" class="section alt-bg">
+            <div class="section-content">
+                <h2 class="section-title" data-i18n="publications_title">论文发表</h2>
+                <div class="publications-list">
+                    <div class="publication-item">
+                        <span class="pub-year">2025</span>
+                        <div class="pub-content">
+                            <h3 class="pub-title" data-i18n="pub1_title">基于密集台阵的某地区地壳结构成像研究</h3>
+                            <p class="pub-journal" data-i18n="pub1_journal">地球物理学报</p>
+                        </div>
+                    </div>
+                    <div class="publication-item">
+                        <span class="pub-year">2025</span>
+                        <div class="pub-content">
+                            <h3 class="pub-title" data-i18n="pub2_title">某某断裂带地震活动性统计分析</h3>
+                            <p class="pub-journal" data-i18n="pub2_journal">Seismological Research Letters</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="section-content">
+                <h2 class="section-title" data-i18n="contact_title">联系方式</h2>
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <span class="contact-label" data-i18n="contact_email">邮箱</span>
+                        <a href="mailto:zhangmingyuan@example.com" class="contact-value">zhangmingyuan@example.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">GitHub</span>
+                        <a href="https://github.com/zhangmingyuan" target="_blank" class="contact-value">github.com/zhangmingyuan</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">ORCID</span>
+                        <a href="https://orcid.org/0000-0000-0000-0000" target="_blank" class="contact-value">orcid.org/0000-0000-0000-0000</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label" data-i18n="contact_location">所在城市</span>
+                        <span class="contact-value" data-i18n="contact_location_value">北京, 中国</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Copyright © 2026 <span data-i18n="footer_name">张明远</span></p>
+    </footer>
+
+    <script src="js/theme.js"></script>
+    <script src="js/i18n.js"></script>
+</body>
+</html>
