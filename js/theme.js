@@ -10,10 +10,10 @@
         function setTheme(isDark) {
             if (isDark) {
                 body.classList.add('dark');
-                if (themeIcon) themeIcon.textContent = '🌙';
+                if (themeIcon) themeIcon.textContent = '☀️';
             } else {
                 body.classList.remove('dark');
-                if (themeIcon) themeIcon.textContent = '☀️';
+                if (themeIcon) themeIcon.textContent = '🌙';
             }
             localStorage.setItem('theme', isDark ? 'dark' : 'light');
         }
@@ -21,7 +21,6 @@
         function initTheme() {
             var savedTheme = localStorage.getItem('theme');
             var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
             if (savedTheme) {
                 setTheme(savedTheme === 'dark');
             } else {
@@ -43,13 +42,34 @@
         }
 
         initTheme();
-
+        initParticles();
         initCursorEffect();
         initNavbarScroll();
         initScrollAnimations();
     }
 
+    function initParticles() {
+        var particlesContainer = document.getElementById('particles');
+        if (!particlesContainer) return;
+
+        var particleCount = 30;
+        for (var i = 0; i < particleCount; i++) {
+            var particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.animationDelay = Math.random() * 15 + 's';
+            particle.style.animationDuration = (10 + Math.random() * 10) + 's';
+            particle.style.opacity = 0.3 + Math.random() * 0.5;
+            particle.style.width = (2 + Math.random() * 4) + 'px';
+            particle.style.height = particle.style.width;
+            particlesContainer.appendChild(particle);
+        }
+    }
+
     function initCursorEffect() {
+        var isMobile = window.matchMedia('(max-width: 768px)').matches;
+        if (isMobile) return;
+
         var cursorCircle = document.createElement('div');
         cursorCircle.className = 'cursor-circle';
         document.body.appendChild(cursorCircle);
@@ -65,19 +85,19 @@
             cursorDot.style.left = x + 'px';
             cursorDot.style.top = y + 'px';
 
-            cursorCircle.style.left = x - 30 + 'px';
-            cursorCircle.style.top = y - 30 + 'px';
+            cursorCircle.style.left = (x - 25) + 'px';
+            cursorCircle.style.top = (y - 25) + 'px';
         });
 
-        var interactiveElements = document.querySelectorAll('a, button, .project-card, .skill-tag, .about-card');
+        var interactiveElements = document.querySelectorAll('a, button, .project-card, .skill-tag, .about-card, .contact-item');
         interactiveElements.forEach(function(el) {
             el.addEventListener('mouseenter', function() {
                 cursorCircle.style.transform = 'scale(1.5)';
-                cursorDot.style.transform = 'scale(1.5)';
+                cursorCircle.style.borderColor = '#764ba2';
             });
             el.addEventListener('mouseleave', function() {
                 cursorCircle.style.transform = 'scale(1)';
-                cursorDot.style.transform = 'scale(1)';
+                cursorCircle.style.borderColor = '#667eea';
             });
         });
     }
@@ -96,7 +116,7 @@
     }
 
     function initScrollAnimations() {
-        var fadeElements = document.querySelectorAll('.section');
+        var fadeElements = document.querySelectorAll('.section, .about-card, .skill-category, .project-card, .publication-item, .contact-item');
         var observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
